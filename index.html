@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFESU Morro Velho</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --cor-primaria: #ff6f3c;
+            --cor-secundaria: #ff2e63;
+            --cor-terciaria: #ff5e78;
+        }
+
+        .navbar, footer {
+            background: var(--cor-primaria);
+        }
+
+        .card-title {
+            color: var(--cor-secundaria);
+            font-weight: bold;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--cor-secundaria);
+            margin: 40px 0 20px;
+            font-weight: bold;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark px-4">
+        <a class="navbar-brand fw-bold text-white" href="#">AFESU Morro Velho</a>
+
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-2"><a class="nav-link" href="#inicio">Início</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#cursos">Cursos</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#quem-somos">Quem Somos</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+
+            <div class="ms-3 d-flex gap-2">
+                <button class="btn btn-light" onclick="setTheme('light')">Light</button>
+                <button class="btn btn-dark" onclick="setTheme('dark')">Dark</button>
+                <button class="btn btn-secondary" onclick="setTheme('auto')">Auto</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CARROSSEL -->
+    <section id="inicio" class="mt-3">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="imagem/afesu.jpg" class="d-block w-100" alt="Imagem AFESU">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagem/Folheto-Antigo-01-300x249.jpg" class="d-block w-100" alt="Folheto antigo">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagem/fundacao-casas-bahia-banqi.webp" class="d-block w-100" alt="Imagem parceria">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagem/afesu_logo.png" class="d-block w-100" alt="Logo AFESU">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- CARTÕES DE CURSOS -->
+    <section id="cursos">
+        <h2 class="section-title">Cursos da AFESU Morro Velho</h2>
+
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- 1 - Operador de Microcomputador -->
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <img src="imagem/operador de microcomputador.jpg" class="card-img-top" alt="Curso Operador de Microcomputador">
+                        <div class="card-body">
+                            <h5 class="card-title">Operador de Microcomputador</h5>
+                            <p class="card-text">
+                                Informática básica, pacote Office e rotinas essenciais para o mercado. 
+                                <a href="https://sp.senai.br/curso/operador-de-microcomputador/94243" target="_blank">Saiba mais</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 - Power BI -->
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <img src="imagem/power bi.png" class="card-img-top" alt="Curso de Power BI">
+                        <div class="card-body">
+                            <h5 class="card-title">Power BI</h5>
+                            <p class="card-text">
+                                Criação de dashboards, relatórios interativos e análise de dados.  
+                                <a href="https://www.sp.senac.br/cursos-livres/curso-de-power-bi" target="_blank">Saiba mais</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 - Redes Locais -->
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <img src="imagem/implantação.jpg" class="card-img-top" alt="Curso Implantação de Redes Locais">
+                        <div class="card-body">
+                            <h5 class="card-title">Implantação de Redes Locais</h5>
+                            <p class="card-text">
+                                Configuração, cabeamento, protocolos e manutenção de redes LAN. 
+                                <a href="https://www.sp.senac.br/cursos-livres/curso-de-implantacao-rede-local-com-windows" target="_blank">Saiba mais</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 - Designer de Interface Web -->
+                <div class="col-md-6">
+                    <div class="card shadow h-100">
+                        <img src="imagem/designer.jpg" class="card-img-top" alt="Curso de Design de Interface Web">
+                        <div class="card-body">
+                            <h5 class="card-title">Designer de Interface Web</h5>
+                            <p class="card-text">
+                                Desenvolvimento visual, interfaces responsivas e UX. 
+                                <a href="https://www.alura.com.br/cursos-online-design-ux/user-interface" target="_blank">Saiba mais</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 - Bootstrap -->
+                <div class="col-md-6">
+                    <div class="card shadow h-100">
+                        <img src="imagem/bootstrap.jpg" class="card-img-top" alt="Curso de Bootstrap">
+                        <div class="card-body">
+                            <h5 class="card-title">Bootstrap</h5>
+                            <p class="card-text">
+                                Aprenda a criar sites modernos, rápidos e responsivos com Bootstrap. 
+                                <a href="#">Saiba mais</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section id="quem-somos">
+        <h2 class="section-title">Quem Somos</h2>
+
+        <div class="container">
+            <p class="lead text-center">
+                A <strong>AFESU Morro Velho</strong> promove educação de qualidade, capacitação profissional
+                e inclusão social, oferecendo cursos gratuitos para jovens e adultos.
+                <a href="https://afesu.org.br/unidade/morro-velho/" target="_blank">Saiba mais</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer id="contato" class="text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h5 class="fw-bold">AFESU Morro Velho</h5>
+                    <p>Educação que transforma e cria oportunidades.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Contato</h5>
+                    <p>CNPJ: 00.000.000/0001-00</p>
+                    <p><a href="tel:+5511999999999" class="text-white">Telefone: (11) 99999-9999</a></p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Redes Sociais</h5>
+                    <p><a href="#" class="text-white">Instagram</a></p>
+                    <p><a href="#" class="text-white">Facebook</a></p>
+                    <p><a href="#" class="text-white">LinkedIn</a></p>
+                </div>
+
+            </div>
+
+            <p class="text-center mt-4">
+                © 2025 AFESU Morro Velho – Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Sistema de alternância de temas -->
+    <script>
+        function setTheme(theme) {
+            if (theme === "auto") {
+                document.documentElement.removeAttribute("data-bs-theme");
+            } else {
+                document.documentElement.setAttribute("data-bs-theme", theme);
+            }
+        }
+    </script>
+
+</body>
+</html>
